@@ -1,4 +1,4 @@
-#gem 'i18n', '=0.3.7'
+gem 'i18n', '=0.3.7'
 module Photos
 #	predefine namespace
 end
@@ -6,9 +6,8 @@ gem 'activerecord', '~> 2'
 require 'active_record'
 require 'ruby_extension'
 require 'rails_helpers'
-#require 'ccls_engine'
-#require 'calnet_authenticated'
-#require 'authorized'
+require 'calnet_authenticated'
+require 'authorized'
 require 'acts_as_list'
 
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(

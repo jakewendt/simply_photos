@@ -1,6 +1,7 @@
 = Photos
 
-
+i18n-0.4.1 is really p!$$!ng me off.
+It's simple existance reaks havoc.
 
 == ToDo
 
