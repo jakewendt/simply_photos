@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-photos}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
      "app/views/photos/index.html.erb",
      "app/views/photos/new.html.erb",
      "app/views/photos/show.html.erb",
-     "config/document.yml",
      "config/photo.yml",
      "config/routes.rb",
      "generators/photos/USAGE",
