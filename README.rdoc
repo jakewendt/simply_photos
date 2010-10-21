@@ -5,6 +5,7 @@ It's simple existance reaks havoc.
 
 == ToDo
 
+* Add missing images (No route matches "/images/full/missing.png")
 
 == Required Gem Sources
 
@@ -17,13 +18,8 @@ It's simple existance reaks havoc.
 * {ruby_extension}[http://github.com/jakewendt/ruby_extension] - modifications, updates and patches for ruby.
 * rails ~> 2
 * i18n =0.3.7
-* jrails
-* chronic
-* ruby-hmac
-* aws-s3
 * ssl_requirement
 * ryanb-acts-as-list
-* gravatar
 * RedCloth
 * paperclip
 * thoughtbot-factory_girl
