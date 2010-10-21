@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-photos}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-10-20}
+  s.date = %q{2010-10-21}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -30,6 +30,11 @@ Gem::Specification.new do |s|
      "generators/photos/USAGE",
      "generators/photos/photos_generator.rb",
      "generators/photos/templates/functional/photos_controller_test.rb",
+     "generators/photos/templates/images/full/missing.png",
+     "generators/photos/templates/images/large/missing.png",
+     "generators/photos/templates/images/medium/missing.png",
+     "generators/photos/templates/images/original/missing.png",
+     "generators/photos/templates/images/small/missing.png",
      "generators/photos/templates/migrations/add_attachments_image_to_photo.rb",
      "generators/photos/templates/migrations/create_photos.rb",
      "generators/photos/templates/unit/photo_test.rb",
