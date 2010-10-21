@@ -6,6 +6,8 @@ It's simple existance reaks havoc.
 == ToDo
 
 * Add missing images (No route matches "/images/full/missing.png")
+* Add tabbed view of photos styles
+* Add image link to view to easy copy/pasting
 
 == Required Gem Sources
 
