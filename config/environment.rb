@@ -6,11 +6,6 @@ RAILS_GEM_VERSION = '2.3.10' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-#       This constant is used in the ucb_ccls_engine#Document
-#       and other places like Amazon buckets
-#       for controlling the path to documents.
-#RAILS_APP_NAME = 'ccls'
-
 Rails::Initializer.run do |config|
 
 	#	rails 3 requires i18n gem which will load
@@ -45,18 +40,6 @@ Rails::Initializer.run do |config|
 			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
 	]
 
-#	config.eager_load_paths += [
-#		File.expand_path(
-#			File.join(File.dirname(__FILE__),'..','test/app/models')),
-#		File.expand_path(
-#			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
-#	]
-#
-#	config.controller_paths += [
-#		File.expand_path(
-#			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
-#	]
-
 	if RUBY_PLATFORM =~ /java/
 		#	I'm surprised that I don't need this in my apps.
 		config.gem 'activerecord-jdbcsqlite3-adapter',
@@ -69,9 +52,6 @@ Rails::Initializer.run do |config|
 		config.gem "sqlite3-ruby", :lib => "sqlite3"
 	end
 	
-#	config.action_mailer.default_url_options = { 
-#		:host => "localhost:3000" }
-
 end
 require 'user'
 require 'role'
