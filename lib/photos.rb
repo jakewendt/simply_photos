@@ -1,19 +1,26 @@
-gem 'i18n', '=0.3.7'
+#gem 'i18n', '=0.3.7'
 module Photos
 #	predefine namespace
 end
-gem 'activerecord', '~> 2'
+#gem 'activerecord', '~> 2'
 require 'active_record'
+require 'action_controller'
 require 'active_support'
 require 'ruby_extension'
 require 'rails_helpers'
-require 'calnet_authenticated'
 require 'authorized'
+require 'calnet_authenticated'
 require 'acts_as_list'
 
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
 ))
+
+%w{models controllers}.each do |dir|
+	path = File.expand_path(File.join(File.dirname(__FILE__), '../app', dir))
+	ActiveSupport::Dependencies.autoload_paths << path
+	ActiveSupport::Dependencies.autoload_once_paths << path
+end
 
 if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'active_support/test_case'

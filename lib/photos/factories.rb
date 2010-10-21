@@ -2,9 +2,9 @@ Factory.define :photo do |f|
 	f.sequence(:title) { |n| "Title#{n}" }
 end
 
-Factory.define :role do |f|
-	f.sequence(:name) { |n| "name#{n}" }
-end
+#Factory.define :role do |f|
+#	f.sequence(:name) { |n| "name#{n}" }
+#end
 
 Factory.define :user do |f|
 	f.sequence(:uid) { |n| "UID#{n}" }

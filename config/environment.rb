@@ -40,6 +40,13 @@ Rails::Initializer.run do |config|
 			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
 	]
 
+#	config.autoload_once_paths += [
+#		File.expand_path(
+#			File.join(File.dirname(__FILE__),'..','test/app/models')),
+#		File.expand_path(
+#			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
+#	]
+
 	if RUBY_PLATFORM =~ /java/
 		#	I'm surprised that I don't need this in my apps.
 		config.gem 'activerecord-jdbcsqlite3-adapter',
@@ -54,4 +61,4 @@ Rails::Initializer.run do |config|
 	
 end
 require 'user'
-require 'role'
+#require 'role'
