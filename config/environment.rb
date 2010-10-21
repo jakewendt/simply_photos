@@ -74,3 +74,4 @@ Rails::Initializer.run do |config|
 
 end
 require 'user'
+require 'role'
