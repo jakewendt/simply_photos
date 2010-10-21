@@ -11,24 +11,34 @@ class PhotosGenerator < Rails::Generator::Base
 				m.migration_template "migrations/#{migration}.rb",
 					'db/migrate', :migration_file_name => migration
 			end
+			dot = File.dirname(__FILE__)
+			m.directory('public/javascripts')
+			Dir["#{dot}/templates/javascripts/*js"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "public/javascripts/#{File.basename(file)}")
+			}
+			m.directory('public/stylesheets')
+			Dir["#{dot}/templates/stylesheets/*css"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "public/stylesheets/#{File.basename(file)}")
+			}
 
-#			m.directory('public/javascripts')
-#			Dir["#{File.dirname(__FILE__)}/templates/javascripts/*js"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "public/javascripts/#{File.basename(file)}")
-#			}
-#			m.directory('public/stylesheets')
-#			Dir["#{File.dirname(__FILE__)}/templates/stylesheets/*css"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "public/stylesheets/#{File.basename(file)}")
-#			}
+
+			m.directory('public/images')
+			%w( full large medium original small ).each do |style|
+				m.directory("public/images/#{style}")
+				m.file("images/#{style}/missing.png",
+					"public/images/#{style}/missing.png")
+			end
+
+
 			m.directory('test/functional/photos')
-			Dir["#{File.dirname(__FILE__)}/templates/functional/*rb"].each{|file| 
+			Dir["#{dot}/templates/functional/*rb"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "test/functional/photos/#{File.basename(file)}")
 			}
 			m.directory('test/unit/photos')
-			Dir["#{File.dirname(__FILE__)}/templates/unit/*rb"].each{|file| 
+			Dir["#{dot}/templates/unit/*rb"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "test/unit/photos/#{File.basename(file)}")
 			}
