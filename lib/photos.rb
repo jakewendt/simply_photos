@@ -4,6 +4,7 @@ module Photos
 end
 gem 'activerecord', '~> 2'
 require 'active_record'
+require 'active_support'
 require 'ruby_extension'
 require 'rails_helpers'
 require 'calnet_authenticated'
@@ -15,7 +16,6 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 ))
 
 if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
-	require 'active_support'
 	require 'active_support/test_case'
 	require 'factory_girl'
 	require 'assert_this_and_that'
