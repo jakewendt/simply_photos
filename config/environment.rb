@@ -22,6 +22,9 @@ Rails::Initializer.run do |config|
 	config.gem "jakewendt-authorized",
 		:lib => "authorized"
 
+	config.gem "jakewendt-rails_helpers",
+		:lib => "rails_helpers"
+
 	config.plugin_paths = [
 		File.expand_path(File.join(File.dirname(__FILE__),'../..')),
 		File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))
