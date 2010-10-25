@@ -28,7 +28,6 @@ if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'factory_girl'
 	require 'assert_this_and_that'
 	require 'photos/factories'
-	require 'photos/factory_test_helper'
 	require 'photos/pending'
 end
 
