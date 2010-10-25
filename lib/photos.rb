@@ -1,8 +1,9 @@
-#gem 'i18n', '=0.3.7'
+# The i18n-0.4.1 gem is still wreaking havoc.
+gem 'i18n', '=0.3.7'
 module Photos
 #	predefine namespace
 end
-#gem 'activerecord', '~> 2'
+gem 'activerecord', '~> 2'
 require 'active_record'
 require 'action_controller'
 require 'active_support'
