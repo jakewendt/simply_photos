@@ -6,8 +6,7 @@
 <%= link_to photo.title, photo %>
 </td>
 <td class='manage'>
-<%= link_to 'Edit', edit_photo_path(photo) %>&nbsp;
-<%= link_to 'Destroy', photo, 
-	:confirm => 'Are you sure?', :method => :delete %>
+<%= button_link_to 'Edit', edit_photo_path(photo) %>&nbsp;
+<%= destroy_link_to 'Destroy', photo_path(photo) %>
 </td>
 <% end %><!-- class='photo row' -->
