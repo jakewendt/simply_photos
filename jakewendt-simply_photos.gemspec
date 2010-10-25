@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_photos}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
@@ -37,11 +37,11 @@ Gem::Specification.new do |s|
      "generators/simply_photos/templates/migrations/add_attachments_image_to_photo.rb",
      "generators/simply_photos/templates/migrations/create_photos.rb",
      "generators/simply_photos/templates/unit/photo_test.rb",
-     "lib/photos.rb",
-     "lib/photos/factories.rb",
-     "lib/photos/file_utils_extension.rb",
-     "lib/photos/pending.rb",
-     "lib/photos/tasks.rb",
+     "lib/simply_photos.rb",
+     "lib/simply_photos/factories.rb",
+     "lib/simply_photos/file_utils_extension.rb",
+     "lib/simply_photos/pending.rb",
+     "lib/simply_photos/tasks.rb",
      "lib/tasks/application.rake",
      "lib/tasks/database.rake",
      "lib/tasks/documentation.rake",
