@@ -1,4 +1,4 @@
-= Photos
+= SimplyPhotos
 
 i18n-0.4.1 is really p!$$!ng me off.
 It's simple existance reaks havoc.
@@ -27,7 +27,7 @@ It's simple existance reaks havoc.
 * jakewendt-rails_helpers
 * jakewendt-ruby_extension
 * jakewendt-calnet_authenticated
-* jakewendt-authorized
+* jakewendt-simply_authorized
 
 == Installation (as a plugin/engine)
 

@@ -1,4 +1,4 @@
-class PhotosGenerator < Rails::Generator::Base
+class SimplyPhotosGenerator < Rails::Generator::Base
 
 	def manifest
 		#	See Rails::Generator::Commands::Create

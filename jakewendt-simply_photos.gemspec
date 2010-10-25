@@ -4,8 +4,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{jakewendt-photos}
-  s.version = "0.2.1"
+  s.name = %q{jakewendt-simply_photos}
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
@@ -39,7 +39,6 @@ Gem::Specification.new do |s|
      "generators/photos/templates/unit/photo_test.rb",
      "lib/photos.rb",
      "lib/photos/factories.rb",
-     "lib/photos/factory_test_helper.rb",
      "lib/photos/file_utils_extension.rb",
      "lib/photos/pending.rb",
      "lib/photos/tasks.rb",
@@ -49,7 +48,7 @@ Gem::Specification.new do |s|
      "lib/tasks/rcov.rake",
      "lib/tasks/ucb_ccls_engine_tasks.rake"
   ]
-  s.homepage = %q{http://github.com/jakewendt/photos}
+  s.homepage = %q{http://github.com/jakewendt/simply_photos}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
@@ -67,7 +66,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
       s.add_runtime_dependency(%q<ryanb-acts-as-list>, [">= 0"])
       s.add_runtime_dependency(%q<jakewendt-calnet_authenticated>, [">= 0"])
-      s.add_runtime_dependency(%q<jakewendt-authorized>, [">= 0"])
+      s.add_runtime_dependency(%q<jakewendt-simply_authorized>, [">= 0"])
     else
       s.add_dependency(%q<i18n>, ["= 0.3.7"])
       s.add_dependency(%q<rails>, ["~> 2"])
@@ -76,7 +75,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
       s.add_dependency(%q<ryanb-acts-as-list>, [">= 0"])
       s.add_dependency(%q<jakewendt-calnet_authenticated>, [">= 0"])
-      s.add_dependency(%q<jakewendt-authorized>, [">= 0"])
+      s.add_dependency(%q<jakewendt-simply_authorized>, [">= 0"])
     end
   else
     s.add_dependency(%q<i18n>, ["= 0.3.7"])
@@ -86,7 +85,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
     s.add_dependency(%q<ryanb-acts-as-list>, [">= 0"])
     s.add_dependency(%q<jakewendt-calnet_authenticated>, [">= 0"])
-    s.add_dependency(%q<jakewendt-authorized>, [">= 0"])
+    s.add_dependency(%q<jakewendt-simply_authorized>, [">= 0"])
   end
 end
 

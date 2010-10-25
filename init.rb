@@ -1,1 +1,1 @@
-require 'photos'
+require 'simply_photos'

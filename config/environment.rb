@@ -19,8 +19,8 @@ Rails::Initializer.run do |config|
 	config.gem "jakewendt-calnet_authenticated",
 		:lib => "calnet_authenticated"
 
-	config.gem "jakewendt-authorized",
-		:lib => "authorized"
+	config.gem "jakewendt-simply_authorized",
+		:lib => "simply_authorized"
 
 	config.gem "jakewendt-rails_helpers",
 		:lib => "rails_helpers"
@@ -29,7 +29,7 @@ Rails::Initializer.run do |config|
 		File.expand_path(File.join(File.dirname(__FILE__),'../..')),
 		File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))
 	]
-	config.plugins = [ :photos, :html_test, :html_test_extension ]
+	config.plugins = [ :simply_photos, :html_test, :html_test_extension ]
 
 	config.frameworks -= [:active_resource]
 
