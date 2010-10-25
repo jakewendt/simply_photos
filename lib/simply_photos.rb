@@ -1,6 +1,6 @@
 # The i18n-0.4.1 gem is still wreaking havoc.
 gem 'i18n', '=0.3.7'
-module Photos
+module SimplyPhotos
 #	predefine namespace
 end
 gem 'activerecord', '~> 2'
@@ -9,8 +9,8 @@ require 'action_controller'
 require 'active_support'
 require 'ruby_extension'
 require 'rails_helpers'
-require 'authorized'
 require 'calnet_authenticated'
+require 'simply_authorized'
 require 'acts_as_list'
 
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
@@ -27,12 +27,12 @@ if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'active_support/test_case'
 	require 'factory_girl'
 	require 'assert_this_and_that'
-	require 'photos/factories'
-	require 'photos/pending'
+	require 'simply_photos/factories'
+	require 'simply_photos/pending'
 end
 
 if RUBY_PLATFORM =~ /java/i
-	require 'photos/file_utils_extension'
+	require 'simply_photos/file_utils_extension'
 end
 
 require 'paperclip'
