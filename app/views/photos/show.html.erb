@@ -1,3 +1,5 @@
+<% javascripts('photo') %>
+<% stylesheets('base/jquery.ui.all.css') %>
 <%# stylesheets('photo') %>
 
 <p>
@@ -8,12 +10,23 @@
 <p>
   <b>Image:</b>
 </p>
+
+
+<div id='images'>
+<ul>
 <% @photo.image.styles.keys.unshift(:original).each do |key| %>
-<div class='image_preview'>
+<li><%= link_to key, "##{key}" %></li>
+<% end %>
+</ul>
+<% @photo.image.styles.keys.unshift(:original).each do |key| %>
+<div id="<%= key %>" class='image_preview'>
 <p><%= link_to( @photo.image.url(key), @photo.image.url(key) ) %></p>
 <%= image_tag @photo.image.url(key) %>
-</div>
+</div><!-- class='image_preview' -->
 <% end %>
+</div><!-- id='images' -->
+
+
 
 <p>
   <b>Caption:</b>
