@@ -15,8 +15,8 @@ It's simple existance reaks havoc.
 
 == Required Gems
 
-* {ruby_extension}[http://github.com/jakewendt/ruby_extension] - modifications, updates and patches for ruby.
-* {assert_this_and_that}[http://github.com/jakewendt/assert_this_and_that]
+* {jakewendt-ruby_extension}[http://github.com/jakewendt/ruby_extension] - modifications, updates and patches for ruby.
+* {jakewendt-assert_this_and_that}[http://github.com/jakewendt/assert_this_and_that]
 * rails ~> 2
 * i18n =0.3.7
 * ssl_requirement
@@ -24,10 +24,9 @@ It's simple existance reaks havoc.
 * RedCloth
 * paperclip
 * thoughtbot-factory_girl
-* jakewendt-rails_helpers
-* jakewendt-ruby_extension
-* jakewendt-calnet_authenticated
-* jakewendt-simply_authorized
+* {jakewendt-simply_helpful}[http://github.com/jakewendt/simply_helpful]
+* {jakewendt-calnet_authenticated}[http://github.com/jakewendt/calnet_authenticated]
+* {jakewendt-simply_authorized}[http://github.com/jakewendt/simply_authorized]
 
 == Installation (as a plugin/engine)
 
