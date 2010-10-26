@@ -5,8 +5,7 @@ It's simple existance reaks havoc.
 
 == ToDo
 
-* Add tabbed view of photos styles
-* Add image link to view to easy copy/pasting
+* Probably need to include jquery ui style.
 
 == Required Gem Sources
 
