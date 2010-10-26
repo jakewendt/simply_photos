@@ -7,6 +7,9 @@
 </td>
 <td class='manage'>
 <%= button_link_to 'Edit', edit_photo_path(photo) %>&nbsp;
-<%= destroy_link_to 'Destroy', photo_path(photo) %>
+<% destroy_link_to 'Destroy', photo_path(photo) do %>
+<%= hidden_field_tag 'confirm', "Destroy photo '#{photo}'?", 
+	:id => nil %>
+<% end %>
 </td>
 <% end %><!-- class='photo row' -->

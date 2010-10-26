@@ -4,6 +4,8 @@
 <table id='photos'><tbody>
 <%= render :partial => 'photo', :collection => @photos %>
 </tbody></table><!-- id='photos' -->
+<% else %>
+Sorry, but no photos yet.
 <% end %>
 
-<p><%= link_to 'Create New Photo', new_photo_path %></p>
+<p><%= button_link_to 'Create New Photo', new_photo_path %></p>

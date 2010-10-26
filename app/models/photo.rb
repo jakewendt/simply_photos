@@ -8,4 +8,8 @@ class Photo < ActiveRecord::Base
 			File.join(File.dirname(__FILE__),'../..','config/photo.yml')
 		))).result)[Rails.env]
 
+	def to_s
+		title
+	end
+
 end

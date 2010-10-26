@@ -20,5 +20,5 @@
   <%=h @photo.caption %>
 </p>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<%= button_link_to 'Edit this Photo', edit_photo_path(@photo) %>&nbsp;
+<%= button_link_to 'Back to Photos', photos_path %>
