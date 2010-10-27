@@ -1,5 +1,5 @@
 # The i18n-0.4.1 gem is still wreaking havoc.
-gem 'i18n', '=0.3.7'
+#gem 'i18n', '=0.3.7'
 module SimplyPhotos
 #	predefine namespace
 end
