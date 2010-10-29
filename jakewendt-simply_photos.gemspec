@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_photos}
-  s.version = "1.0.8"
+  s.version = "1.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-10-27}
+  s.date = %q{2010-10-29}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -41,10 +41,12 @@ Gem::Specification.new do |s|
      "generators/simply_photos/templates/stylesheets/photos.css",
      "generators/simply_photos/templates/unit/photo_test.rb",
      "lib/simply_photos.rb",
+     "lib/simply_photos/autotest.rb",
      "lib/simply_photos/factories.rb",
      "lib/simply_photos/file_utils_extension.rb",
      "lib/simply_photos/pending.rb",
      "lib/simply_photos/tasks.rb",
+     "lib/simply_photos/test_tasks.rb",
      "lib/tasks/application.rake",
      "lib/tasks/database.rake",
      "lib/tasks/documentation.rake",
@@ -56,6 +58,15 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{one-line summary of your gem}
+  s.test_files = [
+    "test/app/controllers/application_controller.rb",
+     "test/app/controllers/home_controller.rb",
+     "test/app/models/user.rb",
+     "test/config/routes.rb",
+     "test/functional/photos/photos_controller_test.rb",
+     "test/test_helper.rb",
+     "test/unit/photos/photo_test.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
