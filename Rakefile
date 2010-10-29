@@ -15,8 +15,6 @@ end
 
 require 'tasks/rails'
 
-
-
 begin
 	require 'jeweler'
 	Jeweler::Tasks.new do |gem|
@@ -29,7 +27,6 @@ begin
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 
 		gem.files  = FileList['config/routes.rb']
-#		gem.files += FileList['config/document.yml']
 		gem.files += FileList['config/photo.yml']
 		gem.files += FileList['app/**/*.rb']
 		gem.files += FileList['app/**/*.erb']
@@ -37,7 +34,12 @@ begin
 		gem.files += FileList['lib/**/*.rake']
 		gem.files += FileList['generators/**/*']
 		gem.files -= FileList['**/versions/*']
-		gem.test_files = []
+#
+#		I'm not quite sure if it matters whether these files
+#		are included as 'files' or 'test_files', but
+#		they need to be included if I'm gonna use'em.
+#
+		gem.test_files = FileList['test/**/*.rb']
 #
 #	It would be really nice if there was a way to
 #	add a source here as ryanb-acts-as-list is on
@@ -57,26 +59,11 @@ begin
 #		Gem.sources << 'http://gems.github.com'
 #		Gem.configuration.write
 #
-#		gem.add_dependency('i18n', '=0.3.7')
 		gem.add_dependency('rails', '~> 2')
-#		gem.add_dependency('activerecord', '~> 2')
-#		gem.add_dependency('activeresource', '~> 2')
-#		gem.add_dependency('activesupport', '~> 2')
-#		gem.add_dependency('actionmailer', '~> 2')
-#		gem.add_dependency('actionpack', '~> 2')
 		gem.add_dependency('paperclip')
-#		gem.add_dependency('jrails')
 		gem.add_dependency('jakewendt-simply_helpful')
 		gem.add_dependency('jakewendt-ruby_extension')
-#		gem.add_dependency('chronic')
-#		gem.add_dependency('ruby-hmac')
-#		gem.add_dependency('aws-s3')
-#		gem.add_dependency('ssl_requirement')
 		gem.add_dependency('ryanb-acts-as-list')
-#		gem.add_dependency('gravatar')
-#		gem.add_dependency('RedCloth')
-#		gem.add_dependency('thoughtbot-factory_girl')
-#		gem.add_dependency('jakewendt-assert_this_and_that')
 		gem.add_dependency('jakewendt-calnet_authenticated')
 		gem.add_dependency('jakewendt-simply_authorized')
 	end
@@ -84,3 +71,5 @@ begin
 rescue LoadError
 	puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
+#	From `script/generate simply_authorized` ...
+require 'simply_authorized/test_tasks'

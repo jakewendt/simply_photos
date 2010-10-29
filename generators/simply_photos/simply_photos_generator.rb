@@ -6,6 +6,20 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 		#	for code methods for record (Manifest)
 		record do |m|
 
+			File.open('Rakefile','a'){|f| 
+				f.puts <<-EOF
+#	From `script/generate simply_photos` ...
+require 'simply_photos/test_tasks'
+				EOF
+			}
+
+			File.open('.autotest','a'){|f| 
+				f.puts <<-EOF
+#	From `script/generate simply_photos` ...
+require 'simply_photos/autotest'
+				EOF
+			}
+
 			%w( create_photos add_attachments_image_to_photo 
 				).each do |migration|
 				m.migration_template "migrations/#{migration}.rb",
@@ -32,16 +46,16 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 			end
 
 
-			m.directory('test/functional/photos')
-			Dir["#{dot}/templates/functional/*rb"].each{|file| 
-				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/functional/photos/#{File.basename(file)}")
-			}
-			m.directory('test/unit/photos')
-			Dir["#{dot}/templates/unit/*rb"].each{|file| 
-				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/unit/photos/#{File.basename(file)}")
-			}
+#			m.directory('test/functional/photos')
+#			Dir["#{dot}/templates/functional/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "test/functional/photos/#{File.basename(file)}")
+#			}
+#			m.directory('test/unit/photos')
+#			Dir["#{dot}/templates/unit/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "test/unit/photos/#{File.basename(file)}")
+#			}
 		end
 	end
 
