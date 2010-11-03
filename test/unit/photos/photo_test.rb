@@ -3,8 +3,7 @@ require 'test_helper'
 
 class SimplyPhotos::PhotoTest < ActiveSupport::TestCase
 
-	assert_should_require(:title,
-		:model => 'Photo')
+	assert_should_require(:title)
 
 	test "should create photo" do
 		assert_difference 'Photo.count' do
@@ -12,14 +11,6 @@ class SimplyPhotos::PhotoTest < ActiveSupport::TestCase
 			assert !object.new_record?, 
 				"#{object.errors.full_messages.to_sentence}"
 		end
-	end
-
-protected
-
-	def create_object(options = {})
-		record = Factory.build(:photo,options)
-		record.save
-		record
 	end
 
 end
