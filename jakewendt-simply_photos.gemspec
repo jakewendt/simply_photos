@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_photos}
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-11-01}
+  s.date = %q{2010-11-03}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -44,7 +44,6 @@ Gem::Specification.new do |s|
      "lib/simply_photos/autotest.rb",
      "lib/simply_photos/factories.rb",
      "lib/simply_photos/file_utils_extension.rb",
-     "lib/simply_photos/pending.rb",
      "lib/simply_photos/tasks.rb",
      "lib/simply_photos/test_tasks.rb",
      "lib/tasks/application.rake",
@@ -64,7 +63,6 @@ Gem::Specification.new do |s|
      "test/app/models/user.rb",
      "test/config/routes.rb",
      "test/functional/photos/photos_controller_test.rb",
-     "test/test_helper.rb",
      "test/unit/photos/photo_test.rb"
   ]
 
