@@ -5,20 +5,24 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 		#	rails-2.3.10/lib/rails_generator/commands.rb
 		#	for code methods for record (Manifest)
 		record do |m|
+			m.directory('config/autotest')
+			m.file('autotest_simply_photos.rb', 'config/autotest/simply_photos.rb')
+			m.directory('lib/tasks')
+			m.file('simply_photos.rake', 'lib/tasks/simply_photos.rake')
 
-			File.open('Rakefile','a'){|f| 
-				f.puts <<-EOF
-#	From `script/generate simply_photos` ...
-require 'simply_photos/test_tasks'
-				EOF
-			}
-
-			File.open('.autotest','a'){|f| 
-				f.puts <<-EOF
-#	From `script/generate simply_photos` ...
-require 'simply_photos/autotest'
-				EOF
-			}
+#			File.open('Rakefile','a'){|f| 
+#				f.puts <<-EOF
+##	From `script/generate simply_photos` ...
+#require 'simply_photos/test_tasks'
+#				EOF
+#			}
+#
+#			File.open('.autotest','a'){|f| 
+#				f.puts <<-EOF
+##	From `script/generate simply_photos` ...
+#require 'simply_photos/autotest'
+#				EOF
+#			}
 
 			%w( create_photos add_attachments_image_to_photo 
 				).each do |migration|
