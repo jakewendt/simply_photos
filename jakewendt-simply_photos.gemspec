@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_photos}
-  s.version = "1.1.2"
+  s.version = "1.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-11-03}
+  s.date = %q{2010-11-05}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
      "config/routes.rb",
      "generators/simply_photos/USAGE",
      "generators/simply_photos/simply_photos_generator.rb",
+     "generators/simply_photos/templates/autotest_simply_photos.rb",
      "generators/simply_photos/templates/functional/photos_controller_test.rb",
      "generators/simply_photos/templates/images/full/missing.png",
      "generators/simply_photos/templates/images/large/missing.png",
@@ -37,6 +38,7 @@ Gem::Specification.new do |s|
      "generators/simply_photos/templates/javascripts/photo.js",
      "generators/simply_photos/templates/migrations/add_attachments_image_to_photo.rb",
      "generators/simply_photos/templates/migrations/create_photos.rb",
+     "generators/simply_photos/templates/simply_photos.rake",
      "generators/simply_photos/templates/stylesheets/photo.css",
      "generators/simply_photos/templates/stylesheets/photos.css",
      "generators/simply_photos/templates/unit/photo_test.rb",
