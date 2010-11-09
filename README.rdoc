@@ -28,6 +28,12 @@
  cp config/s3.yml.example config/s3.yml
  # Add your own s3 access keys.  Leave 'test' as it is.
 
+ config.gem 'jakewendt-simply_photos',
+   :lib    => 'simply_photos',
+   :source => 'http://rubygems.org'
+
+ script/generate simply_photos
+
 == Testing (as an app)
 
  rake db:migrate
