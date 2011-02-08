@@ -1,1 +1,1 @@
-require 'simply_photos'
+require 'jakewendt-simply_photos'
