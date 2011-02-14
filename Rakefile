@@ -64,6 +64,7 @@ begin
 		gem.add_dependency('paperclip')
 		gem.add_dependency('jakewendt-simply_helpful')
 		gem.add_dependency('jakewendt-ruby_extension')
+		gem.add_dependency('jakewendt-rails_extension')
 		gem.add_dependency('ryanb-acts-as-list')
 		gem.add_dependency('jakewendt-calnet_authenticated')
 		gem.add_dependency('jakewendt-simply_authorized')
