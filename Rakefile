@@ -66,7 +66,7 @@ begin
 		gem.add_dependency('jakewendt-ruby_extension')
 		gem.add_dependency('jakewendt-rails_extension')
 		gem.add_dependency('ryanb-acts-as-list')
-		gem.add_dependency('jakewendt-calnet_authenticated')
+		gem.add_dependency('ccls-calnet_authenticated')
 		gem.add_dependency('jakewendt-simply_authorized')
 	end
 	Jeweler::GemcutterTasks.new
