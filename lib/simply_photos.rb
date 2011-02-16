@@ -23,11 +23,14 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	ActiveSupport::Dependencies.autoload_once_paths << path
 end
 
-if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
+#if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
+if Rails.class_variable_defined?("@@configuration")
 	require 'active_support/test_case'
 	require 'factory_girl'
 #	require 'simply_testable'
 	require 'simply_photos/factories'
+#	else
+#	running a rake task
 end
 
 if RUBY_PLATFORM =~ /java/i
