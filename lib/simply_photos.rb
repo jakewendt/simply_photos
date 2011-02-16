@@ -23,7 +23,7 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	ActiveSupport::Dependencies.autoload_once_paths << path
 end
 
-if Rails.class_variable_defined?("@@configuration")
+if defined?(Rails) && Rails.env == 'test' && Rails.class_variable_defined?("@@configuration")
 	require 'active_support/test_case'
 	require 'factory_girl'
 	require 'simply_photos/factories'
