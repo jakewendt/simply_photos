@@ -23,11 +23,9 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	ActiveSupport::Dependencies.autoload_once_paths << path
 end
 
-#if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 if Rails.class_variable_defined?("@@configuration")
 	require 'active_support/test_case'
 	require 'factory_girl'
-#	require 'simply_testable'
 	require 'simply_photos/factories'
 #	else
 #	running a rake task
@@ -44,7 +42,6 @@ else
 	ActiveRecord::Base.send(:include, ::Paperclip)
 end
 
-
 ActionController::Routing::Routes.add_configuration_file(
 	File.expand_path(
 		File.join(
@@ -54,4 +51,3 @@ ActionController::Base.view_paths <<
 	File.expand_path(
 		File.join(
 			File.dirname(__FILE__), '../app/views'))
-
