@@ -9,7 +9,7 @@ require 'action_controller'
 require 'active_support'
 require 'ruby_extension'
 require 'simply_helpful'
-require 'calnet_authenticated'
+#require 'calnet_authenticated'
 require 'simply_authorized'
 require 'acts_as_list'
 
