@@ -13,6 +13,7 @@ require 'simply_helpful'
 require 'simply_authorized'
 require 'acts_as_list'
 
+require 'action_controller'	#	loads HTML
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
 ))
