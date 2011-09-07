@@ -15,7 +15,7 @@ class PhotosController < ApplicationController
 		@photo = Photo.new(params[:photo])
 		@photo.save!
 		redirect_to @photo
-	rescue ActiveRecord::RecordInvalid
+	rescue ActiveRecord::RecordInvalid, ActiveRecord::RecordNotSaved
 		flash.now[:error] = "Error"
 		render :action => 'new'
 	end
@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
 	def update
 		@photo.update_attributes!(params[:photo])
 		redirect_to @photo
-	rescue ActiveRecord::RecordInvalid
+	rescue ActiveRecord::RecordInvalid, ActiveRecord::RecordNotSaved
 		flash.now[:error] = "Error"
 		render :action => 'edit'
 	end
