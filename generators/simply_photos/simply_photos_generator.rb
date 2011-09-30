@@ -5,6 +5,9 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 		#	rails-2.3.10/lib/rails_generator/commands.rb
 		#	for code methods for record (Manifest)
 		record do |m|
+
+			#	multiple runs will add this route multiple times.
+			#	How to do this conditionally?
 			m.route_resources :photos
 
 #			m.directory('config/autotest')

@@ -5,7 +5,8 @@ As of version 2.0.0, this gem will be simply a generator rather than an "engine.
 
 == ToDo
 
-* Probably need to include jquery ui style.
+* Add attachment tests
+
 
 == Required Gem Sources
 
@@ -30,8 +31,9 @@ As of version 2.0.0, this gem will be simply a generator rather than an "engine.
  cp config/s3.yml.example config/s3.yml
  # Add your own s3 access keys.  Leave 'test' as it is.
 
- config.gem 'jakewendt-simply_photos',
-   :source => 'http://rubygems.org'
+#	No longer needed as the components are just installed in the app.
+# config.gem 'jakewendt-simply_photos',
+#   :source => 'http://rubygems.org'
 
  script/generate simply_photos
 
