@@ -5,10 +5,12 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 		#	rails-2.3.10/lib/rails_generator/commands.rb
 		#	for code methods for record (Manifest)
 		record do |m|
-			m.directory('config/autotest')
-			m.file('autotest_simply_photos.rb', 'config/autotest/simply_photos.rb')
-			m.directory('lib/tasks')
-			m.file('simply_photos.rake', 'lib/tasks/simply_photos.rake')
+			m.route_resources :photos
+
+#			m.directory('config/autotest')
+#			m.file('autotest_simply_photos.rb', 'config/autotest/simply_photos.rb')
+#			m.directory('lib/tasks')
+#			m.file('simply_photos.rake', 'lib/tasks/simply_photos.rake')
 
 #			File.open('Rakefile','a'){|f| 
 #				f.puts <<-EOF
@@ -29,18 +31,25 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 				m.migration_template "migrations/#{migration}.rb",
 					'db/migrate', :migration_file_name => migration
 			end
+
 			dot = File.dirname(__FILE__)
+			m.directory('config')
+			Dir["#{dot}/templates/config/*yml"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "config/#{File.basename(file)}")
+			}
+
 			m.directory('public/javascripts')
 			Dir["#{dot}/templates/javascripts/*js"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "public/javascripts/#{File.basename(file)}")
 			}
+
 			m.directory('public/stylesheets')
 			Dir["#{dot}/templates/stylesheets/*css"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "public/stylesheets/#{File.basename(file)}")
 			}
-
 
 			m.directory('public/images')
 			%w( full large medium original small ).each do |style|
@@ -49,17 +58,35 @@ class SimplyPhotosGenerator < Rails::Generator::Base
 					"public/images/#{style}/missing.png")
 			end
 
+			m.directory('app/models')
+			Dir["#{dot}/templates/models/*rb"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "app/models/#{File.basename(file)}")
+			}
 
-#			m.directory('test/functional/photos')
-#			Dir["#{dot}/templates/functional/*rb"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "test/functional/photos/#{File.basename(file)}")
-#			}
-#			m.directory('test/unit/photos')
-#			Dir["#{dot}/templates/unit/*rb"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "test/unit/photos/#{File.basename(file)}")
-#			}
+			m.directory('app/controllers ')
+			Dir["#{dot}/templates/controllers/*rb"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "app/controllers/#{File.basename(file)}")
+			}
+
+			m.directory('app/views/photos')
+			Dir["#{dot}/templates/views/photos/*rb"].each{|file| 
+				f = file.split('/').slice(-3,3).join('/')				#	has an extra directory in path
+				m.file(f, "app/views/photos/#{File.basename(file)}")
+			}
+
+			m.directory('test/functional')
+			Dir["#{dot}/templates/functional/*rb"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "test/functional/#{File.basename(file)}")
+			}
+
+			m.directory('test/unit')
+			Dir["#{dot}/templates/unit/*rb"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "test/unit/#{File.basename(file)}")
+			}
 		end
 	end
 

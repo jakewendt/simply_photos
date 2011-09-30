@@ -1,5 +1,7 @@
 = SimplyPhotos
 
+As of version 2.0.0, this gem will be simply a generator rather than an "engine."  I'll be making some "major" modifications and the road may get a bit bumpy.
+
 
 == ToDo
 
