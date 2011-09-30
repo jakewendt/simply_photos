@@ -1,5 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
 
+	map.resource :home, :only => :show
+	map.root :controller => :home, :action => :show
+
 	#	http://wiki.rubyonrails.org/rails/pages/ReservedWords
 	#	image - Due to that there is an image_path helper, using images as a restful route will cause issues.
 	#	test_AWiHTTPS_should_get_index_with_admin_login(DocumentsControllerTest):

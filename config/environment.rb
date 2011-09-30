@@ -8,40 +8,19 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
+	config.gem 'paperclip'
 	config.gem 'jakewendt-simply_sessions'
 	config.gem "jakewendt-simply_authorized"
 	config.gem "jakewendt-simply_helpful"
 	config.gem "jakewendt-html_test"
 	config.gem "jakewendt-rails_extension"
 
-	config.plugin_paths = [
-		File.expand_path(File.join(File.dirname(__FILE__),'../..'))
-	]
-	config.plugins = [ :simply_photos ]
+#	config.plugin_paths = [
+#		File.expand_path(File.join(File.dirname(__FILE__),'../..'))
+#	]
+#	config.plugins = [ :simply_photos ]
 
 	config.frameworks -= [:active_resource]
-
-	config.routes_configuration_file = File.expand_path(
-		File.join(File.dirname(__FILE__),'..','test/config/routes.rb'))
-
-	config.autoload_paths += [
-		File.expand_path(
-			File.join(File.dirname(__FILE__),'..','test/app/models')),
-		File.expand_path(
-			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
-	]
-
-#	config.autoload_once_paths += [
-#		File.expand_path(
-#			File.join(File.dirname(__FILE__),'..','test/app/models')),
-#		File.expand_path(
-#			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
-#	]
-
-	config.view_path = [
-		File.expand_path(
-			File.join(File.dirname(__FILE__),'..','test/app/views'))
-	]
 
 	if RUBY_PLATFORM =~ /java/
 		#	I'm surprised that I don't need this in my apps.
